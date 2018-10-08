@@ -7,6 +7,8 @@ export default (state = jobsReducerDefaultState, action) => {
                 ...state,
                 action.job
             ];
+        case 'SET_JOBS':
+            return action.jobs;
         default:
         return state;
     }

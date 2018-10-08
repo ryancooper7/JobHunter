@@ -1,16 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { addJob } from '../actions/jobs';
 
-class JobForm extends React.Component {
+export default class JobForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            title: '',
-            company: '',
-            salary: '',
-            interview: 'placeholder',
+            title: props.job ? props.job.title: '',
+            company: props.job ? props.job.company : '',
+            salary: props.job ? props.job.salary : '',
+            interview: props.job ? props.job.interview : 'placeholder',
             error:''
         };
     }
@@ -45,14 +43,13 @@ class JobForm extends React.Component {
             this.setState(() => ({
                 error: ''
             }));
-            this.props.addJob({
+            this.props.onSubmit({
                 title: this.state.title,
                 company: this.state.company,
                 salary: this.state.salary,
                 interview: this.state.interview
             });
         }
-        this.props.onSubmit();
     };
 
     render() {
@@ -90,9 +87,3 @@ class JobForm extends React.Component {
         );
     }
 };
-
-const mapDispatchToProps = (dispatch) => ({
-    addJob: (job) => dispatch(addJob(job))
-});
-
-export default connect(undefined, mapDispatchToProps)(JobForm);
