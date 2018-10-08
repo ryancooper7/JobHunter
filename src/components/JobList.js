@@ -1,6 +1,7 @@
 import React from 'react';
 import JobListItem from './JobListItem';
 import { connect } from 'react-redux';
+import selectJobs from '../selectors/jobs';
 
 const JobList = (props) => (
     <div>
@@ -19,7 +20,7 @@ const JobList = (props) => (
 );
 
 const mapStateToProps = (state) => ({
-    jobs: state.jobs
+    jobs: selectJobs(state.jobs, state.filters)
 });
 
 export default connect(mapStateToProps)(JobList);

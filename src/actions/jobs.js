@@ -50,3 +50,34 @@ export const startSetJobs = () => {
         });
     };
 };
+
+//REMOVE_JOB
+export const removeJob = ({ id } = {}) => ({
+    type: 'REMOVE_JOB',
+    id
+});
+
+export const startRemoveJob = ({ id } = {}) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/jobs/${id}`).remove().then(() => {
+            dispatch(removeJob({ id }));
+        });
+    };
+};
+
+//EDIT_JOB
+export const editJob = (id, updates) => ({
+    type: 'EDIT_JOB',
+    id,
+    updates
+});
+
+export const startEditJob = (id, updates) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/jobs/${id}`).update(updates).then(() => {
+            dispatch(editJob(id, updates));
+        });
+    };
+};

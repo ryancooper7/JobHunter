@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import { EditJobPage } from '../components/EditJobPage'
+import EditJobPage from '../components/EditJobPage'
 import DashboardPage from '../components/DashboardPage';
 import NotFoundPage from '../components/NotFoundPage';
 import AddJobPage from '../components/AddJobPage';

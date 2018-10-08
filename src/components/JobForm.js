@@ -5,7 +5,7 @@ export default class JobForm extends React.Component {
         super(props);
 
         this.state = {
-            title: props.job ? props.job.title: '',
+            title: props.job ? props.job.title : '',
             company: props.job ? props.job.company : '',
             salary: props.job ? props.job.salary : '',
             interview: props.job ? props.job.interview : 'placeholder',
@@ -59,7 +59,7 @@ export default class JobForm extends React.Component {
                 <input 
                     type="text" 
                     placeholder="Job Title"
-                    value ={this.state.value}
+                    value ={this.state.title}
                     onChange={this.onTitleChange}
                 />
                 <input 
@@ -82,7 +82,7 @@ export default class JobForm extends React.Component {
                     <option value="video">Video Conference</option>
                     <option value="inPerson">In Person Interview</option>
                 </select>
-                <button>Add Job</button>
+                <button>{this.props.job ? 'Update Job' : 'Add Job'}</button>
             </form>
         );
     }
