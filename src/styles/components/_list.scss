@@ -7,11 +7,33 @@
   padding: $s-size $m-size;
 }
 
+.list-header-dev {
+  background: $off-white;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size $m-size;
+  border: 1px solid darken($off-white, 7%);
+  font-weight: bold;
+}
+
+.list-content {
+}
+
 .list-body {
   margin-bottom: $m-size;
   @media (min-width: $desktop-breakpoint) {
     margin-bottom: $l-size;
   }
+}
+
+.list-item-dev {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding: $s-size;
+  border: 1px solid darken($off-white, 7%);
+  border-top: none;
 }
 
 .list-item {

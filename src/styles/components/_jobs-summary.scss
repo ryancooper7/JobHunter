@@ -1,0 +1,13 @@
+.jobs-summary {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.jobs-summary__link {
+    text-decoration: none;
+    color: white;
+    background: $blue;
+    padding: $s-size $s-size;
+    border-radius: 2px;
+}

@@ -3,9 +3,13 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const JobsSummary = ({ numberOfJobs }) => (
-    <div>
-        <h2>You have applied to {numberOfJobs} Jobs and received 0 offers</h2>
-        <Link to="./add">Add a Job</Link>
+    <div className="page-header">
+        <div className="content-container">
+            <div className="jobs-summary">
+                <h1 className="page-header__title">You have applied to <span>{numberOfJobs}</span> Jobs and received <span>0</span> offers</h1>
+                <Link className="jobs-summary__link" to="./add">Add a Job</Link>
+            </div>
+        </div>
     </div>
 );
 

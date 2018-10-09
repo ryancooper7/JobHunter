@@ -10,14 +10,16 @@ export class JobListFilters extends React.Component {
 
     render () {
         return (
-            <div>
-                <h2>Filters</h2>
-                <input
-                    type="text"
-                    placeholder="Search Jobs"
-                    value={this.props.filters.text}
-                    onChange={this.onTextChange}
-                />
+            <div className="content-container">
+                <div className="jobs-filters">
+                    <h2>Search Jobs</h2>
+                    <input
+                        type="text"
+                        placeholder="Search Jobs"
+                        value={this.props.filters.text}
+                        onChange={this.onTextChange}
+                    />
+                </div>
             </div>
         );
     }
