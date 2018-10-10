@@ -47,7 +47,8 @@ export default class JobForm extends React.Component {
                 title: this.state.title,
                 company: this.state.company,
                 salary: this.state.salary,
-                interview: this.state.interview
+                interview: this.state.interview,
+                status: this.props.job ? this.props.job.status : 'interviewing'
             });
         }
     };

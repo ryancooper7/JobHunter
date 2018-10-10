@@ -10,19 +10,20 @@ const JobList = (props) => (
                 <span>No Jobs</span> 
             </div>           
         ) : (
-            <table className="list-table">
-                <thead className="list-table-head">
+            <table className="table">
+                <thead className="table-head">
                     <tr>
                         <td>Company</td>
                         <td>Position</td>
                         <td>Salary</td>
-                        <td>Interview</td>
+                        <td>Next Interview Type</td>
                         <td>Status</td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
                     {props.jobs.map((job) => {
-                        return <JobListItem key={job.id} {...job} />
+                        return <JobListItem key={job.id} job={job} />
                     })}
                 </tbody>
             </table>

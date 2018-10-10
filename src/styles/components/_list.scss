@@ -1,109 +1,48 @@
-.list-header {
-  background: $off-white;
-  border: 1px solid darken($off-white, 7%);
-  color: $grey;
-  display: flex;
-  justify-content: space-between;
-  padding: $s-size $m-size;
-}
-
-.list-header-dev {
-  background: $off-white;
-  display: flex;
-  justify-content: space-between;
-  padding: $s-size $m-size;
-  border: 1px solid darken($off-white, 7%);
-  font-weight: bold;
-}
-
-.list-table-head {
+.table-head {
   background: $off-white;
   font-weight: bold;
 }
 
-.list-table-tr {
-  border-bottom: 1px solid darken($off-white, 7%);
+.green-row {
+  background: $green;
 }
 
-.list-content {
+.yellow-row {
+  background: $yellow
 }
 
-.list-body {
-  margin-bottom: $m-size;
-  @media (min-width: $desktop-breakpoint) {
-    margin-bottom: $l-size;
-  }
+.red-row {
+  background: $red;
 }
 
-.list-item-dev {
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  padding: $s-size;
-  border: 1px solid darken($off-white, 7%);
-  border-top: none;
+.gray-row {
+  background: $gray
 }
 
-.list-table {
+.table {
   width: 100%;
+  color: black;
   border: 1px solid darken($off-white, 7%);
   border-collapse: collapse;
+  tr {
+    border: 1px solid darken($off-white, 7%);
+  }
   td {
     text-align: center;
     padding: $s-size;
-    border: 1px solid darken($off-white, 7%);
   }
 }
 
-.list-item__select {
-}
-
-.list-item {
-  border: 1px solid darken($off-white, 7%);
-  border-top: none;
-  color: $dark-grey;
-  display: flex;
-  flex-direction: column;
-  padding: $s-size;
+.table__link {
   text-decoration: none;
-  transition: background .3s ease;
-  &:hover {
-    background: $off-white;
-  }
-  @media (min-width: $desktop-breakpoint) {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: $m-size;
-  }
+  color: white;
+  background: $blue;
+  padding: $m-size $m-size;
+  border-radius: 2px;
 }
 
-.list-item--message {
-  align-items: center;
-  color: $grey;
-  justify-content: center;
-  padding: $m-size;
-  &:hover {
-    background: none;
-  }
-}
-
-.list-item__title {
-  margin: 0;
-  word-break: break-all;
-}
-
-.list-item__sub-title {
-  color: $grey;
-  font-size: $font-size-small;
-}
-
-.list-item__data {
-  margin: $s-size 0 0 0;
-  @media (min-width: $desktop-breakpoint) {
-    margin: 0;
-    padding-left: $s-size;
-  }
+.table__select {
+  padding: $s-size $s-size;
+  border-radius: 2px;
+  border: none
 }

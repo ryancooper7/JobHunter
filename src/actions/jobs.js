@@ -14,9 +14,10 @@ export const startAddJob = (jobData = {}) => {
             title = '',
             company = '',
             salary = '',
-            interview = 'placeholder'
+            interview = 'placeholder',
+            status = 'interviewing'
         } = jobData;
-        const job = { title, company, salary, interview};
+        const job = { title, company, salary, interview, status };
 
         return database.ref(`users/${uid}/jobs`).push(job).then((ref) => {
             dispatch(addJob({
