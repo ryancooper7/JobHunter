@@ -16,6 +16,15 @@
   font-weight: bold;
 }
 
+.list-table-head {
+  background: $off-white;
+  font-weight: bold;
+}
+
+.list-table-tr {
+  border-bottom: 1px solid darken($off-white, 7%);
+}
+
 .list-content {
 }
 
@@ -30,10 +39,25 @@
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: black;
   padding: $s-size;
   border: 1px solid darken($off-white, 7%);
   border-top: none;
+}
+
+.list-table {
+  width: 100%;
+  border: 1px solid darken($off-white, 7%);
+  border-collapse: collapse;
+  td {
+    text-align: center;
+    padding: $s-size;
+    border: 1px solid darken($off-white, 7%);
+  }
+}
+
+.list-item__select {
 }
 
 .list-item {

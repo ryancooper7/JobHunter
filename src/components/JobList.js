@@ -5,25 +5,30 @@ import selectJobs from '../selectors/jobs';
 
 const JobList = (props) => (
     <div className="content-container">
-        <div className="list-header-dev">
-            <div>Company</div>
-            <div>Position</div>
-            <div>Salary</div>
-            <div>Interview</div>
-        </div>
-        <div>
-            {
-                props.jobs.length === 0 ? (
-                    <div>
-                        <span>No jobs</span>
-                    </div>
-                ) : (
-                    props.jobs.map((job) => {
+        {props.jobs.length === 0 ? (
+            <div>
+                <span>No Jobs</span> 
+            </div>           
+        ) : (
+            <table className="list-table">
+                <thead className="list-table-head">
+                    <tr>
+                        <td>Company</td>
+                        <td>Position</td>
+                        <td>Salary</td>
+                        <td>Interview</td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {props.jobs.map((job) => {
                         return <JobListItem key={job.id} {...job} />
-                    })
-                )
-            }
-        </div>
+                    })}
+                </tbody>
+            </table>
+        )
+    
+        }
     </div>
 );
 
@@ -32,3 +37,25 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(JobList);
+
+/*<div className="list-header-dev">
+<div>Company</div>
+<div>Position</div>
+<div>Salary</div>
+<div>Interview</div>
+<div>Status</div>
+<div>  </div>
+</div>
+<div>
+{
+    props.jobs.length === 0 ? (
+        <div>
+            <span>No jobs</span>
+        </div>
+    ) : (
+        props.jobs.map((job) => {
+            return <JobListItem key={job.id} {...job} />
+        })
+    )
+}
+</div>*/
