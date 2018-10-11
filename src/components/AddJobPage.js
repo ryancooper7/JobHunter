@@ -11,7 +11,7 @@ export class AddJobPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="content-container">
                 <h1>Add a Job</h1>
                 <JobForm onSubmit={this.onSubmit}/>
             </div>

@@ -42,7 +42,7 @@
 }
 
 .table__select {
-  padding: $s-size $s-size;
-  border-radius: 2px;
-  border: none
+  padding: $s-size;
+  background: $off-white;
+  border: 1px solid darken($off-white, 7%);
 }

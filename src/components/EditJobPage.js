@@ -17,12 +17,13 @@ export class EditJobPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="content-container">
+                <h1>Edit Job</h1>
                 <JobForm
                     job={this.props.job} 
                     onSubmit={this.onSubmit}
                 />
-                <button onClick={this.onRemove}>Remove Job</button>
+                <button className="button-delete" onClick={this.onRemove}>Remove Job</button>
             </div>
         );
     }

@@ -1,7 +1,9 @@
 //Get visible expenses
-export default (jobs, { text }) => {
+export default (jobs, { companyText, positionText}) => {
     return jobs.filter((job) => {
-        const companyTextMatch = job.company.toLowerCase().includes(text.toLowerCase());
-        return companyTextMatch;
+        const companyTextMatch = job.company.toLowerCase().includes(companyText.toLowerCase());
+        const positionTextMatch = job.title.toLowerCase().includes(positionText.toLowerCase());
+
+        return (companyTextMatch && positionTextMatch);
     });
 };

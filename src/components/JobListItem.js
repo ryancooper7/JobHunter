@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 
 class JobListItem extends React.Component {
     onStatusChange = (e) => {
-        console.log(this.props.job.id);
         this.props.startEditJob(this.props.job.id, {status: e.target.value});
     };
+
+    onInterviewChange = (e) => {
+        this.props.startEditJob(this.props.job.id, {interview: e.target.value});
+    }
 
 
     render() {
@@ -55,9 +58,16 @@ class JobListItem extends React.Component {
                 </td>
                 <td>{this.props.job.title}</td>
                 <td>{this.props.job.salary}</td>
-                <td>{interviewText}</td>
                 <td>
-                    <select onChange={this.onStatusChange} className="table__select" value={this.props.job.status}>
+                    <select onChange={this.onInterviewChange} value={this.props.job.interview}>
+                        <option value="screen">Initial Screen</option>
+                        <option value="phone">Phone Interview</option>
+                        <option value="video">Video Conference</option>
+                        <option value="inPerson">In Person Interview</option>
+                    </select>
+                </td>
+                <td>
+                    <select className="table__select" onChange={this.onStatusChange} value={this.props.job.status}>
                         <option value="interviewing">Interviewing</option>
                         <option value="rejected">Rejected</option>
                         <option value="ghosted">Ghosted</option>

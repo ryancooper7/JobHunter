@@ -55,35 +55,38 @@ export default class JobForm extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form className="form" onSubmit={this.onSubmit}>
                 {this.state.error && <p>{this.state.error}</p>}
                 <input 
+                    className="text-input"
                     type="text" 
                     placeholder="Job Title"
                     value ={this.state.title}
                     onChange={this.onTitleChange}
                 />
                 <input 
+                    className="text-input"
                     type="text"
                     placeholder="Company"
                     value={this.state.company}
                     onChange={this.onCompanyChange}
                 />
                 <input 
+                    className="text-input"
                     type="text"
                     placeholder="Salary"
                     value={this.state.salary}
                     onChange={this.onSalaryChange}
 
                 />
-                <select onChange={this.onInterviewChange} value={this.state.interview}>
+                <select className="select select-form" onChange={this.onInterviewChange} value={this.state.interview}>
                     <option disabled value="placeholder">Next Interview</option>
                     <option value="screen">Initial Screen</option>
                     <option value="phone">Phone Interview</option>
                     <option value="video">Video Conference</option>
                     <option value="inPerson">In Person Interview</option>
                 </select>
-                <button>{this.props.job ? 'Update Job' : 'Add Job'}</button>
+                <button className="button-form">{this.props.job ? 'Update Job' : 'Add Job'}</button>
             </form>
         );
     }
