@@ -4,7 +4,7 @@ import { startLogin } from '../actions/auth';
 export const LoginPage = ({ startLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h1 className="box-layout__title">Job Hunt</h1>
+      <h1 className="box-layout__title">Job Hunter</h1>
       <p>Keep track of your job search!</p>
       <button className="button" onClick={startLogin}>Login with Google</button>
     </div>
