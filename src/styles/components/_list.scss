@@ -25,7 +25,7 @@
   color: black;
   border-collapse: collapse;
   tr {
-    border: 1px solid darken($off-white, 15%);
+    border: 2px solid white;
   }
   td {
     text-align: center;
@@ -49,4 +49,12 @@
 
 .table-whole {
   margin-bottom: $l-size;
+}
+
+.status-select {
+  width: 150px;
+}
+
+.interview-select {
+  width: 210px;
 }
