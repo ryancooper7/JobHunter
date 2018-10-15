@@ -1,6 +1,7 @@
 .table-head {
-  background: $off-white;
+  background: $blue;
   font-weight: bold;
+  color: white;
 }
 
 .green-row {
@@ -8,7 +9,7 @@
 }
 
 .yellow-row {
-  background: $yellow
+  background: $yellow;
 }
 
 .red-row {
@@ -16,16 +17,15 @@
 }
 
 .gray-row {
-  background: $gray
+  background: $gray;
 }
 
 .table {
   width: 100%;
   color: black;
-  border: 1px solid darken($off-white, 7%);
   border-collapse: collapse;
   tr {
-    border: 1px solid darken($off-white, 7%);
+    border: 1px solid darken($off-white, 15%);
   }
   td {
     text-align: center;
